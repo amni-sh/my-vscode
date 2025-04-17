@@ -1,0 +1,20 @@
+{
+    // font settings
+    "editor.fontSize": 17,
+    "editor.fontFamily": "JetBrains Mono", // このフォントは自由
+    "editor.fontLigatures": true,
+    // vim settings
+    "vim.useSystemClipboard": true,
+    "vim.handleKeys": {
+        // 以下はVimのショートカットを使わない
+        "<C-c>": false, // コピー
+        "<C-v>": false, // ペースト
+        "<C-x>": false, // カット
+        "<C-a>": false, // 全選択
+        "<C-f>": false, // 検索 
+    },
+    // color theme settings
+    "workbench.colorTheme": "Tokyo Night",
+    // other settings
+    "files.autoSave": "afterDelay"
+}

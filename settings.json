@@ -17,4 +17,5 @@
     "workbench.colorTheme": "Tokyo Night",
     // other settings
     "files.autoSave": "afterDelay"
+    "editor.formatOnSave": true,
 }

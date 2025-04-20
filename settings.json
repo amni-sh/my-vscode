@@ -1,11 +1,15 @@
 {
     // font settings
     "editor.fontSize": 17,
-    "editor.fontFamily": "JetBrains Mono", // このフォントは自由
+    "editor.fontFamily": "\"0xProto\"", // このフォントは自由
     "editor.fontLigatures": true,
+    // color theme settings
+    "workbench.colorTheme": "Tokyo Night", // このテーマは自由
     // vim settings
     "vim.useSystemClipboard": true,
+    "vim.hlsearch": true, // 検索結果をハイライト
     "vim.handleKeys": {
+        "<C-y>": true,
         // 以下はVimのショートカットを使わない
         "<C-c>": false, // コピー
         "<C-v>": false, // ペースト
@@ -13,9 +17,8 @@
         "<C-a>": false, // 全選択
         "<C-f>": false, // 検索 
     },
-    // color theme settings
-    "workbench.colorTheme": "Tokyo Night",
     // other settings
-    "files.autoSave": "afterDelay"
+    "files.autoSave": "afterDelay",
     "editor.formatOnSave": true,
+    "editor.minimap.enabled": false, // ミニマップを非表示
 }

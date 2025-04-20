@@ -17,8 +17,39 @@
         "<C-a>": false, // 全選択
         "<C-f>": false, // 検索 
     },
+    "vim.leader": "<space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            // xで削除したときにクリップボードに入れない
+            "before": [
+                "x"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "x"
+            ]
+        },
+        {
+            // sで修正したときにクリップボードに入れない
+            "before": [
+                "s"
+            ],
+            "after": [
+                "\"",
+                "_",
+                "s"
+            ]
+        },
+        {
+            // Explorerを開く
+            "before": ["<leader>", "e"],
+            "commands": [":Ex"]
+        },
+    ],
     // other settings
     "files.autoSave": "afterDelay",
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false, // ミニマップを非表示
+    "files.insertFinalNewline": true, // ファイルの保存時に改行を末尾に挿入
 }

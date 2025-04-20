@@ -1,8 +1,9 @@
 {
     // font settings
-    "editor.fontSize": 17,
-    "editor.fontFamily": "\"0xProto\"", // このフォントは自由
+    "editor.fontSize": 16,
+    "editor.fontFamily": "JetBrains Mono", // このフォントは自由
     "editor.fontLigatures": true,
+    "editor.fontWeight": "500",
     // color theme settings
     "workbench.colorTheme": "Tokyo Night", // このテーマは自由
     // vim settings
@@ -43,8 +44,26 @@
         },
         {
             // Explorerを開く
-            "before": ["<leader>", "e"],
-            "commands": [":Ex"]
+            "before": [
+                "<leader>",
+                "e"
+            ],
+            "commands": [
+                ":Ex"
+            ]
+        },
+        {
+            // Explorerを開く
+            "before": [
+                "<leader>",
+                "q"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.closeActiveEditor",
+                    "args": []
+                }
+            ]
         },
     ],
     // other settings

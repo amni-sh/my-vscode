@@ -5,7 +5,7 @@
     "editor.fontLigatures": true,
     "editor.fontWeight": "500",
     // color theme settings
-    "workbench.colorTheme": "Tokyo Night", // このテーマは自由
+    "workbench.colorTheme": "Ayu Mirage Zed", // このテーマは自由
     // vim settings
     "vim.useSystemClipboard": true,
     "vim.hlsearch": true, // 検索結果をハイライト
@@ -18,6 +18,7 @@
         "<C-a>": false, // 全選択
         "<C-f>": false, // 検索 
     },
+    "vim.smartRelativeLine": true,
     "vim.leader": "<space>",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -65,10 +66,51 @@
                 }
             ]
         },
+        {
+            // 折り返しの見た目通りに移動する
+            "before": [
+                "j"
+            ],
+            "after": [
+                "g",
+                "j"
+            ]
+        },
+        {
+            // 折り返しの見た目通りに移動する
+            "before": [
+                "k"
+            ],
+            "after": [
+                "g",
+                "k"
+            ]
+        },
+    ],
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "j"
+            ],
+            "after": [
+                "g",
+                "j"
+            ]
+        },
+        {
+            "before": [
+                "k"
+            ],
+            "after": [
+                "g",
+                "k"
+            ]
+        }
     ],
     // other settings
     "files.autoSave": "afterDelay",
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false, // ミニマップを非表示
     "files.insertFinalNewline": true, // ファイルの保存時に改行を末尾に挿入
+    "editor.wordWrap": "on", // 折り返しを有効にする
 }

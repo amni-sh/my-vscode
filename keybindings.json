@@ -1,5 +1,31 @@
 // Place your key bindings in this file to override the defaults
 [
+    //-----------------------------------------------------
+    // 何も開いていないときの設定
+    //-----------------------------------------------------
+    {
+        "key": "space f f",
+        "command": "find-it-faster.findFiles",
+        "when": "!editorFocus && !terminalFocus && !inputFocus"
+    },
+    {
+        "key": "space f w",
+        "command": "find-it-faster.findWithinFiles",
+        "when": "!editorFocus && !terminalFocus && !inputFocus"
+    },
+    {
+        "key": "space e",
+        "command": "workbench.action.toggleSidebarVisibility",
+        "when": "!editorFocus && !terminalFocus && !inputFocus"
+    },
+    {
+        "key": "space o",
+        "command": "workbench.action.focusSideBar",
+        "when": "!editorFocus && !terminalFocus && !inputFocus"
+    },
+    //-----------------------------------------------------
+    // エディタにフォーカス時
+    //-----------------------------------------------------
     {
         // 右のファイルに移動
         "key": "ctrl+h",
@@ -16,4 +42,32 @@
         "command": "acceptSelectedSuggestion",
         "when": "acceptSuggestionOnEnter"
     },
+    {
+        // Copilotへフォーカス
+        "key": "ctrl+t l",
+        "command": "aichat.focuschatpanelaction",
+        "when": "editorFocus && vim.mode == 'Normal'"
+    },
+    //-----------------------------------------------------
+    // サイドバーフォーカス時
+    //-----------------------------------------------------
+    {
+        // 新しいファイルの作成
+        "key": "a",
+        "command": "explorer.newFile",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        // リネーム 
+        "key": "r",
+        "command": "renameFile",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        // 削除 
+        "key": "d",
+        "command": "deleteFile",
+        "when": "listFocus && !inputFocus"
+    },
 ]
+

@@ -3,12 +3,13 @@
     "editor.fontSize": 16,
     "editor.fontFamily": "JetBrains Mono", // このフォントは自由
     "editor.fontLigatures": true,
-    "editor.fontWeight": "500",
+    "editor.fontWeight": "600",
     // color theme settings
-    "workbench.colorTheme": "Ayu Mirage Zed", // このテーマは自由
+    "workbench.colorTheme": "GitHub Dark Colorblind (Beta)", // このテーマは自由
     // vim settings
     "vim.useSystemClipboard": true,
     "vim.hlsearch": true, // 検索結果をハイライト
+    "editor.lineNumbers": "relative", // 相対的行番号
     "vim.handleKeys": {
         "<C-y>": true,
         // 以下はVimのショートカットを使わない
@@ -18,7 +19,6 @@
         "<C-a>": false, // 全選択
         "<C-f>": false, // 検索 
     },
-    "vim.smartRelativeLine": true,
     "vim.leader": "<space>",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
@@ -44,27 +44,59 @@
             ]
         },
         {
-            // Explorerを開く
+            // Explorerの閉開
             "before": [
                 "<leader>",
                 "e"
             ],
             "commands": [
-                ":Ex"
+                "workbench.action.toggleSidebarVisibility"
+            ],
+            "when": [
+                "editorFocus && vim.mode == 'Normal'"
             ]
         },
         {
-            // Explorerを開く
+            // Explorerへ移動
+            "before": [
+                "<leader>",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.focusSideBar"
+            ],
+        },
+        {
+            // ファイルを閉じる
             "before": [
                 "<leader>",
                 "q"
             ],
             "commands": [
-                {
-                    "command": "workbench.action.closeActiveEditor",
-                    "args": []
-                }
-            ]
+                "workbench.action.closeActiveEditor"
+            ],
+        },
+        {
+            // ファイル検索
+            "before": [
+                "<leader>",
+                "f",
+                "f"
+            ],
+            "commands": [
+                "find-it-faster.findFiles"
+            ],
+        },
+        {
+            // ファイル内検索
+            "before": [
+                "<leader>",
+                "f",
+                "w"
+            ],
+            "commands": [
+                "find-it-faster.findWithinFiles"
+            ],
         },
         {
             // 折り返しの見た目通りに移動する
@@ -112,5 +144,8 @@
     "editor.formatOnSave": true,
     "editor.minimap.enabled": false, // ミニマップを非表示
     "files.insertFinalNewline": true, // ファイルの保存時に改行を末尾に挿入
-    "editor.wordWrap": "on", // 折り返しを有効にする
+    "editor.autoClosingBrackets": "always", // かっこ補完
+    "editor.autoClosingQuotes": "always", // 引用符補完 
+    "editor.wordWrap": "on",
+    // settings for each environment
 }

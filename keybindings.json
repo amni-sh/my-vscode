@@ -23,6 +23,11 @@
         "command": "workbench.action.focusSideBar",
         "when": "!editorFocus && !terminalFocus && !inputFocus"
     },
+    {
+        "key": "space c",
+        "command": "workbench.action.chat.openInEditor",
+        "when": "!editorFocus && !terminalFocus && !inputFocus"
+    },
     //-----------------------------------------------------
     // エディタにフォーカス時
     //-----------------------------------------------------
@@ -44,9 +49,26 @@
     },
     {
         // Copilotへフォーカス
-        "key": "ctrl+t l",
-        "command": "aichat.focuschatpanelaction",
+        "key": "ctrl+c o",
+        "command": "workbench.panel.chat.view.copilot.resetViewLocation",
         "when": "editorFocus && vim.mode == 'Normal'"
+    },
+    {
+        // Copilotの画面を閉じる
+        "key": "ctrl+c q",
+        "command": "workbench.action.closeAuxiliaryBar",
+    },
+    {
+        // Copilotで新しいチャットを作成
+        "key": "ctrl+c n",
+        "command": "workbench.action.chat.newChat",
+        "when": "inChat"
+    },
+    {
+        // ターミナルを開く
+        "key": "ctrl+t t",
+        "command": "workbench.action.terminal.toggleTerminal",
+        "when": "!terminalFocus"
     },
     //-----------------------------------------------------
     // サイドバーフォーカス時
@@ -70,4 +92,3 @@
         "when": "listFocus && !inputFocus"
     },
 ]
-

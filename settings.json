@@ -5,10 +5,14 @@
     "editor.fontLigatures": true,
     "editor.fontWeight": "600",
     // color theme settings
-    "workbench.colorTheme": "GitHub Dark Colorblind (Beta)", // このテーマは自由
+    "workbench.colorTheme": "GitHub Dark Dimmed",
     // vim settings
-    "vim.useSystemClipboard": true,
+    "vim.easymotion": true, // easymotionを有効にする
+    "vim.incsearch": true, // インクリメンタルサーチを有効にする
     "vim.hlsearch": true, // 検索結果をハイライト
+    "vim.searchHighlightColor": "#5f9ea0", // 検索結果のハイライト色
+    "vim.searchMatchColor": "#5f9ea0", // 検索結果のマッチ色
+    "vim.useSystemClipboard": true,
     "editor.lineNumbers": "relative", // 相対的行番号
     "vim.handleKeys": {
         "<C-y>": true,
@@ -116,6 +120,15 @@
             "after": [
                 "g",
                 "k"
+            ]
+        },
+        {
+            // nohl
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
             ]
         },
     ],
